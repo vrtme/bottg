@@ -238,7 +238,7 @@ async def approver(event):
     welcome_msg = eval(await db.get("WELCOME_MSG") or "{}")
     chat_welcome = (
         welcome_msg.get(chat)
-        or "Hello {name}, your request to join {chat} has been {dn}"
+        or "{name}, Добро пожаловать! Ваша заявка на вступление в канал {chat} одобрена!"
     )
     chat_welcome += "\nSend /start to know more."  # \n\n__**Powered by @BotzHub**__"
     who = await bot.get_entity(event.user_id)
