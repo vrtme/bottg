@@ -240,7 +240,7 @@ async def approver(event):
         welcome_msg.get(chat)
         or "{name}, Добро пожаловать! Ваша заявка на вступление в канал {chat} одобрена!"
     )
-    chat_welcome += "\nSend /start to know more."  # \n\n__**Powered by @BotzHub**__"
+    chat_welcome += "\n"  # Демо инфа"
     who = await bot.get_entity(event.user_id)
     chat_ = await bot.get_entity(chat)
     dn = "approved!"
@@ -257,7 +257,7 @@ async def approver(event):
         await bot.send_message(
             event.user_id,
             chat_welcome.format(name=who.first_name, chat=chat_.title, dn=dn),
-            buttons=Button.url("Updates", url="https://t.me/BotzHub"),
+            buttons=Button.url("ПЕРЕЙТИ НА КАНАЛ", url="https://t.me/+usUNimc2FPljMmRi"),
         )
     with contextlib.suppress(errors.rpcerrorlist.UserAlreadyParticipantError):
         await bot(
