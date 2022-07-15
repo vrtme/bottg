@@ -28,6 +28,9 @@
             "description": "User ID of users who own the bot, split by space.",
             "value": "719195224"
         }
+        "LINK_CHANNEL": {
+            "description": "Link channel",
+            "value": ""
     },
     "buildpacks": [
         {
